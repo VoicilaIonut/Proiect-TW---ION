@@ -292,23 +292,22 @@ p {
 #services .service-bottom {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	gap: 1%;
+	grid-gap: 1%;
 	align-items: center;
 	justify-content: center;
 	margin-top: 50px;
 }
 
 #services .service-item {
-	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
-	justify-content: center;
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
 	margin: 5%;
 	position: relative;
 	overflow: hidden;
+	height: 225px;
 }
 
 #services .service-item::after {
@@ -653,7 +652,6 @@ p {
 	}
 
 	#services .service-bottom .service-item {
-		flex-basis: 45%;
 		margin: 2.5%;
 	}
 
@@ -790,7 +788,6 @@ p {
 	/* End header */
 
 	#services .service-bottom .service-item {
-		flex-basis: 22%;
 		margin: 1.5%;
 	}
 
@@ -803,6 +800,8 @@ p {
 /* End  Media Query For Desktop */
 
 
+
+/* Media Query For Small Screen dropdown and start background */
 @media only screen and (max-width: 1200px) {
 	#start {
 		background-image: url(https://www.revolut.com/_next/image-asset/w:1080/q:90/https%3A%2F%2Fassets.revolut.com%2Fwebsite%2Fassets%2Fretail%2Fhome-V4%2FHero_Mobile.png%3Fauthuser%3D0);
@@ -853,3 +852,5 @@ p {
 		display: block;
 	}
 }
+
+/* End Media Query For Small Screen dropdown and start background /*
