@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ION super aplicație financiară</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon-16x16.png">
+</head>
+
+<body>
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#start">
+                        <h1><span>I</span>on</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="dropdown"> Meniu
+                        <div class="dropdown-content">
+                            <a class="header-hiperlink" href="/index.html">Acasa</a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a class="header-hiperlink" href="/index.html">Acasa</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div id="content">
+            <form id="register" action="register.php" method="post">
+                <ul>
+                    <li>
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="E-mail">
+                    </li>
+                    <li>
+                        <label for="password">Parola:</label>
+                        <input type="password" id="password" name="password" placeholder="Parola">
+                    </li>
+                    <li>
+                        <label for="password">Confirmare parola:</label>
+                        <input type="password" id="confirmpassword" name="confirmpassword"
+                            placeholder="Confirmare parola">
+                    </li>
+                    <button class="register" classtype="submit">Înregistrează-te</button>
+                </ul>
+            </form>
+
+            <p id="message"></p>
+        </div>
+        <!-- <div class="credit-calculator">
+            <h2>Calculator credit</h2>
+            <p>Durata creditului (luni):</p>
+            <input type="range" id="creditDuration" min="1" max="120" value="12" />
+            <p>Valoarea creditului:</p>
+            <input type="range" id="creditAmount" min="1000" max="50000" value="10000" />
+            <p>Rata lunară: <span id="monthlyPayment"></span></p>
+        </div> -->
+    </div>
+</body>
+
+<script src="register.js"></script>
+
+</html>

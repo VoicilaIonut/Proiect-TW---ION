@@ -854,3 +854,39 @@ p {
 }
 
 /* End Media Query For Small Screen dropdown and start background /*
+
+/* Media Query For Small Screen dropdown and start background */
+.red {
+	background-color: rgb(241, 173, 173);
+}
+
+form {
+	padding: 10px;
+	;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+input {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
