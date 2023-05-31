@@ -30,12 +30,6 @@ window.onload = function () {
     content.appendChild(logOut);
     content.appendChild(buttonBack);
   } else {
-    function colorWithARandomColor(element) {
-      let colors = ["#F5F5F5", "#E1F5FE", "#C8E6C9", "#FFFFE0"];
-      let colorIndex = Math.floor(Math.random() * colors.length);
-      element.style.backgroundColor = colors[colorIndex];
-    }
-
     colorWithARandomColor(document.getElementById("register"));
     colorWithARandomColor(body);
 
@@ -111,12 +105,47 @@ window.onload = function () {
         return true;
       });
 
-    function colorBorderInputsWithRed() {
-      let inputElements = document.getElementsByTagName("input");
-      for (let i = 0; i < inputElements.length; i++) {
-        inputElements[i].style.borderColor = "red";
-        setTimeout(() => (inputElements[i].style.borderColor = "black"), 2500);
-      }
+    addSmileFaceWithCanvas();
+  }
+  function colorWithARandomColor(element) {
+    let colors = ["#F5F5F5", "#E1F5FE", "#C8E6C9", "#FFFFE0"];
+    let colorIndex = Math.floor(Math.random() * colors.length);
+    element.style.backgroundColor = colors[colorIndex];
+  }
+
+  function colorBorderInputsWithRed() {
+    let inputElements = document.getElementsByTagName("input");
+    for (let i = 0; i < inputElements.length; i++) {
+      inputElements[i].style.borderColor = "red";
+      setTimeout(() => (inputElements[i].style.borderColor = "black"), 2500);
     }
+  }
+
+  function addSmileFaceWithCanvas() {
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    canvas.parentElement.style = "flex-direction: column;";
+    canvas.width = 500;
+    canvas.height = 500;
+    // Cercul pentru fata
+    ctx.beginPath();
+    ctx.arc(250, 250, 100, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // Ochiul stang
+    ctx.beginPath();
+    ctx.arc(210, 220, 10, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // Ochiul drept
+    ctx.beginPath();
+    ctx.arc(290, 220, 10, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // Zambetul
+    ctx.beginPath();
+    ctx.arc(250, 270, 60, 0, Math.PI);
+    ctx.stroke();
   }
 };
